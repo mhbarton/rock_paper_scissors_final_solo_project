@@ -1,1 +1,3 @@
-# rock_paper_scissors_final_solo_project
+# rock_paper_scissors_final_solo_projectm
+
+making attempt
