@@ -94,31 +94,10 @@ aside{
     padding: 13px 50px 13px;
   } */
 
-.rock{
+.original-characters,
+.spicy-characters{
   height: 150px;
   width: 150px;
-
-}
-
-.paper{
-  height: 150px;
-  width: 150px;
-}
-
-.scissors{
-  height: 150px;
-  width: 150px;
-}
-
-.lizard{
-  height: 150px;
-  width: 150px;
-}
-
-.spock{
-  height: 150px;
-  width: 150px;
-  opacity:4;
 }
 
 .hidden{

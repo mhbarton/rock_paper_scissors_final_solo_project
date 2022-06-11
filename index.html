@@ -16,13 +16,14 @@
             <button class="change-game" hidden >Change Game</button>
           </div>
       </aside>
-      <main class="main-view">
-        <h1>Rock, Paper, Scissors</h1>
-        <h2 class="pick-game">Pick Your Game!</h2>
-        <h2 class="choose-figther" hidden> Choose Your Fighter! </h2>
-        <h2 class="results" hidden> Results here:</h2>
-        <div class="game-choices">
-        <container class="game-choice-original">
+      <main>
+        <section class="main-view">
+          <h1>Rock, Paper, Scissors</h1>
+          <h2 class="pick-game">Pick Your Game!</h2>
+          <h2 class="choose-figther" hidden> Choose Your Fighter! </h2>
+          <h2 class="results" hidden> Results here:</h2>
+          <article class="game-choices">
+            <container class="game-choice-original">
           <div>
               <h3> &#129704; Original &#129704; <h3>
           </div>
@@ -40,21 +41,23 @@
               <p> Lizard > Paper & Spock </p>
               <p> Spock > Scissors & Rock </p>
         </container>
-      </div>
+      </article>
         <section class="fighters">
-          <section class="original-fighters" hidden>
-            <img class="rock" src="./assets/rockicon.png">
-            <img class="paper" src="./assets/papericon.png">
-            <img class="scissors" src="./assets/scissoricon.jpeg">
-          </section>
-          <section class="spicy-fighters" hidden>
-            <img class="lizard" src="./assets/lizardicon.png">
-            <img class="spock" src="./assets/spockicon.jpeg">
-          </section>
-        <section class="results" hidden>
+          <article class="original-fighters" >
+            <img class="original-characters" src="./assets/rockicon.png">
+            <img class="original-characters" src="./assets/papericon.png">
+            <img class="original-characters" src="./assets/scissoricon.jpeg">
+          </article>
+          <article class="spicy-fighters">
+            <img class="spicy-characters" src="./assets/lizardicon.png">
+            <img class="spicy-characters" src="./assets/spockicon.jpeg">
+          </article>
+        <article class="results" hidden>
             <h2 class="player-wins"> 웃 Player Wins 웃 </h2>
             <h2 class="computer-wins"> &#128187; Computer Wins &#128187; </h2>
             <h2 class="no-wins"> &#128529; It's a draw! &#128529; </h2>
+        </article>
+      </section>
       </main>
       <aside class="computer">
           <img class="computer-icon" src="./assets/computericon.png">
