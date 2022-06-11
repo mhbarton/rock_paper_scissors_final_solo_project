@@ -1,0 +1,126 @@
+*{
+  border:2px solid red;
+}
+
+ *{
+  font-family: 'Marker Felt', fantasy;
+}
+
+body{
+  background-image: url("./assets/corkboard.jpeg");
+  z-index: 1;
+  opacity: 0.8;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+}
+
+main{
+  display: flex;
+  width: 60%;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1{
+  font-size: 85px;
+  /* background-image: url("./assets/slipofpaper.jpeg");
+  height: 500px;
+  width: 1000px; */
+}
+
+h2{
+  font-size:40px;
+}
+
+h3{
+  font-size: 20px;
+}
+
+aside{
+  height: 100%;
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.player{
+  float: left;
+}
+
+.computer{
+  float:right;
+}
+
+.game-choices{
+  display:flex;
+}
+
+.change-game{
+  font-size: 25px;
+  font-weight: 200;
+  letter-spacing: 1px;
+  padding: 13px 20px 13px;
+  outline: 0;
+  border: 1px solid black;
+  cursor: pointer;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.change-game:after {
+  content: "";
+  background-color: #0048BA;
+  width: 100%;
+  z-index: -1;
+  position: absolute;
+  height: 100%;
+  top: 7px;
+  left: 7px;
+  transition: 0.2s;
+}
+
+.change-game:hover:after {
+  top: 0px;
+  left: 0px;
+}
+
+/* @media (min-width: 768px) {
+  .change-game {
+    padding: 13px 50px 13px;
+  } */
+
+.rock{
+  height: 150px;
+  width: 150px;
+
+}
+
+.paper{
+  height: 150px;
+  width: 150px;
+}
+
+.scissors{
+  height: 150px;
+  width: 150px;
+}
+
+.lizard{
+  height: 150px;
+  width: 150px;
+}
+
+.spock{
+  height: 150px;
+  width: 150px;
+  opacity:4;
+}
+
+.hidden{
+display: none;
+}

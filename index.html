@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <link href="http://fonts.cdnfonts.com/css/callie-chalk-font" rel="stylesheet">
+    <link href="./assets/favicon.ico" rel="icon" type="image/x-icon" />
+    <link rel="stylesheet" href="./styles.css">
+    <title>Rock, Paper Scissors</title>
+  </head>
+  <body>
+      <aside class="player">
+        <img class="player-icon" src="./assets/playericon.png">
+        <h2>Player</h2>
+        <h3>wins:<span class="human-wins"></span></h3>
+          <div class="change-game-button">
+            <button class="change-game" hidden >Change Game</button>
+          </div>
+      </aside>
+      <main class="main-view">
+        <h1>Rock, Paper, Scissors</h1>
+        <h2 class="pick-game">Pick Your Game!</h2>
+        <h2 class="choose-figther" hidden> Choose Your Fighter! </h2>
+        <h2 class="results" hidden> Results here:</h2>
+        <div class="game-choices">
+        <container class="game-choice-original">
+          <div>
+              <h3> &#129704; Original &#129704; <h3>
+          </div>
+              <p> Rock > Scissors </p>
+              <p> Paper > Rock </p>
+              <p> Scissors > Paper </p>
+        </container>
+        <container class="game-choice-spicy">
+          <div>
+              <h3> &#127798; Spicy &#127798; <h3>
+          </div>
+              <p> Rock > Scissors & Lizard </p>
+              <p> Paper > Rock & Spock </p>
+              <p> Scissors > Paper & Lizard </p>
+              <p> Lizard > Paper & Spock </p>
+              <p> Spock > Scissors & Rock </p>
+        </container>
+      </div>
+        <section class="fighters">
+          <section class="original-fighters" hidden>
+            <img class="rock" src="./assets/rockicon.png">
+            <img class="paper" src="./assets/papericon.png">
+            <img class="scissors" src="./assets/scissoricon.jpeg">
+          </section>
+          <section class="spicy-fighters" hidden>
+            <img class="lizard" src="./assets/lizardicon.png">
+            <img class="spock" src="./assets/spockicon.jpeg">
+          </section>
+        <section class="results" hidden>
+            <h2 class="player-wins"> 웃 Player Wins 웃 </h2>
+            <h2 class="computer-wins"> &#128187; Computer Wins &#128187; </h2>
+            <h2 class="no-wins"> &#128529; It's a draw! &#128529; </h2>
+      </main>
+      <aside class="computer">
+          <img class="computer-icon" src="./assets/computericon.png">
+          <h2>Computer</h2>
+          <h3>wins:<span class="computer-wins"></span></h3>
+      </aside>
+    <script src="player.js"></script>
+    <script src="game.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
