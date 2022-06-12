@@ -3,7 +3,7 @@ class Player{
     this.name = name;
     this.token = token;
     this.wins = 0;
-    this.currentChoice = null;
+    this.currentChoice;
   }
   takeTurn(event){
     this.currentChoice = event.target.id

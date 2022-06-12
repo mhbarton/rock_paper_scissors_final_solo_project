@@ -43,9 +43,10 @@ aside{
   display: flex;
   flex-direction: column;
   align-items: center;
+  border-style: double;
 }
 
-.player{
+.person{
   float: left;
 }
 
@@ -53,8 +54,14 @@ aside{
   float:right;
 }
 
-.game-choices{
+.game-choices-view {
   display:flex;
+}
+
+.person-icon,
+.computer-icon{
+  height: 75px;
+  width: 75px;
 }
 
 .change-game{
@@ -94,11 +101,16 @@ aside{
     padding: 13px 50px 13px;
   } */
 
-.original-characters,
-.spicy-characters{
-  height: 150px;
-  width: 150px;
+
+.fighters-view{
+  display: flex;
+  height: 100px;
 }
+
+.original-characters{
+  height: 186px;
+}
+
 
 .hidden{
 display: none;
