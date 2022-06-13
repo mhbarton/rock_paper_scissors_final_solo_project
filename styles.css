@@ -1,15 +1,15 @@
-*{
+/* *{
   border:2px solid red;
-}
+} */
 
  *{
   font-family: 'Marker Felt', fantasy;
 }
 
 body{
-  background-image: url("./assets/corkboard.jpeg");
-  z-index: 1;
-  opacity: 0.8;
+  background-image: url("./assets/background2.jpeg");
+  /* z-index: 1;
+  opacity: 0.8; */
   width: 100vw;
   height: 100vh;
   display: flex;
@@ -24,13 +24,15 @@ main{
 
 h1{
   font-size: 85px;
-  /* background-image: url("./assets/slipofpaper.jpeg");
-  height: 500px;
+  /* background-image: url("./assets/slipofpaper.jpeg"); */
+  /* height: 500px;
   width: 1000px; */
 }
 
 h2{
   font-size:40px;
+  display:flex;
+  justify-content: center;
 }
 
 h3{
@@ -44,6 +46,7 @@ aside{
   flex-direction: column;
   align-items: center;
   border-style: double;
+  border-color: #805533;
 }
 
 .person{
@@ -109,6 +112,10 @@ aside{
 
 .original-characters{
   height: 186px;
+}
+
+.spicy-characters{
+  height: 180px;
 }
 
 
