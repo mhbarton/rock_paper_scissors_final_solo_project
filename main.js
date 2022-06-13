@@ -3,7 +3,7 @@ var game = new Game();
 
 // query selectors
 var originalFighters = document.querySelector(".original-fighters");
-var spicyFigthers = document.querySelector(".spicy-fighters")
+var spicyFighters = document.querySelector(".spicy-fighters")
 var gameChoices = document.querySelector(".game-choices-view");
 var originalGame = document.querySelector(".game-choice-original");
 var spicyGame = document.querySelector(".game-choice-spicy");
@@ -12,7 +12,7 @@ var personWins = document.querySelector(".person-wins");
 var computerWins = document.querySelector(".computer-wins");
 var tie = document.querySelector(".no-wins");
 var pickGame = document.querySelector(".pick-game");
-var pickFighter = document.querySelector(".choose-fighter");
+var pickFighter = document.querySelector(".pick-fighter");
 var resultsIn = document.querySelector(".results");
 var computerWins = document.querySelector(".computer-wins-calculator");
 var personWins = document.querySelector(".person-wins-calculator");
@@ -21,10 +21,10 @@ var changeGameButton = document.querySelector(".change-game");
 
 
 // event listeners
-
-// window.
-originalGame.addEventListener('click', pickOriginalGame)
-originalFighters.addEventListener('click', pickOriginalFighters)
+originalGame.addEventListener('click', pickOriginalGame);
+originalFighters.addEventListener('click', pickOriginalFighters);
+spicyGame.addEventListener('click', pickSpicyGame);
+spicyFighters.addEventListener('click', pickSpicyFighters);
 
 
 function pickOriginalGame(){
@@ -44,11 +44,29 @@ function pickOriginalFighters(){
   console.log(game)
 }
 
-// function
-// interpolate `${}`
+function pickSpicyGame(){
+  changeGameButton.classList.remove('hidden')
+  originalGame.classList.add('hidden')
+  spicyGame.classList.add('hidden')
+  originalFighters.classList.remove('hidden')
+  spicyFighters.classList.remove('hidden')
+  pickFighter.classList.remove('hidden')
+  pickGame.classList.add('hidden')
+}
 
+function pickSpicyFighters(){
+  game.pickFighters();
+  game.person.takeTurn(event);
+  game.generateComputerPick();
+  game.decideWinner();
+  console.log(game)
+}
 
-// functions
-// setTimeout(function () {
-//   reset
-// }, 10);
+function resetGame(){
+  if(game.category === "Original"){
+    setTimeout(pickOriginalGame, 3000);
+  } else if(game.category === "Spicy"){
+    setTimeout(pickSpicyGame, 3000)
+  }
+
+}
