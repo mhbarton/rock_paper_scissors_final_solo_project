@@ -11,61 +11,64 @@
       <aside class="person">
         <img class="person-icon" src="./assets/personicon.png">
         <h2>Person</h2>
-        <h3>wins:<span class="person-wins"></span></h3>
+        <h3>wins:<span class="person-wins-calculator"></span></h3>
           <div class="change-game-button">
-            <button class="change-game" hidden >Change Game</button>
+            <button class="change-game hidden" >Change Game</button>
           </div>
       </aside>
-      <main>
+      <main>f
         <section class="main-view">
           <h1>Rock, Paper, Scissors</h1>
           <h2 class="pick-game">Pick Your Game!</h2>
-          <h2 class="choose-figther" hidden> Choose Your Fighter! </h2>
-          <h2 class="results" hidden> Results here:</h2>
+          <h2 class="choose-fighter hidden"> Choose Your Fighter! </h2>
+          <h2 class="results hidden"> And the winner is:</h2>
           <article class="game-choices-view">
             <container class="game-choice-original">
-          <div>
+            <div>
               <h3> &#129704; Original &#129704; <h3>
-          </div>
+            </div>
               <p> Rock > Scissors </p>
               <p> Paper > Rock </p>
               <p> Scissors > Paper </p>
-        </container>
-        <container class="game-choice-spicy">
-          <div>
+            </container>
+            <container class="game-choice-spicy">
+            <div>
               <h3> &#127798; Spicy &#127798; <h3>
-          </div>
+            </div>
               <p> Rock > Scissors & Lizard </p>
               <p> Paper > Rock & Spock </p>
               <p> Scissors > Paper & Lizard </p>
               <p> Lizard > Paper & Spock </p>
               <p> Spock > Scissors & Rock </p>
-        </container>
-      </article>
+            </container>
+          </article>
         <section class="fighters-view">
-          <article class="original-fighters" >
-            <img class="original-characters" id="rock" src="./assets/rockicon.png" alt="rock icon">
-            <img class="original-characters" id="paper" src="./assets/papericon.png" alt="paper icon">
-            <img class="original-characters" id="scissors" src="./assets/scissoricon.jpeg" alt="scissors icon">
+          <article class="original-fighters hidden">
+            <img class="original-characters" id="rock" src="./assets/rockicon.svg" alt="rock icon">
+            <img class="original-characters" id="paper" src="./assets/papericon.svg" alt="paper icon">
+            <img class="original-characters" id="scissors" src="./assets/scissoricon.svg" alt="scissors icon">
           </article>
-          <article class="spicy-fighters">
-            <img class="spicy-characters" id="lizard" src="./assets/lizardicon.png" alt="lizard icon">
-            <img class="spicy-characters" id="Spock" src="./assets/spockicon.jpeg" alt="Spock icon">
+          <article class="spicy-fighters hidden">
+            <img class"spicy-characters" id="lizard" src="./assets/lizardicon.svg" alt="lizard icon">
+            <img id="spock" src="./assets/spockicon.svg" alt="Spock icon">
           </article>
-        <article class="results-view" hidden>
-            <h2 class="person-wins"> 웃 Person Wins 웃 </h2>
-            <h2 class="computer-wins"> &#128187; Computer Wins &#128187; </h2>
-            <h2 class="no-wins"> &#128529; It's a draw! &#128529; </h2>
+        <article class="results-view hidden">
+            <h2 class="person-wins"> 웃 Person 웃 </h2>
+            <h2 class="computer-wins"> &#128187; Computer &#128187; </h2>
+            <h2 class="no-wins"> &#128529; Oh it's a draw! &#128529; </h2>
         </article>
       </section>
       </main>
       <aside class="computer">
           <img class="computer-icon" src="./assets/computericon.png">
           <h2>Computer</h2>
-          <h3>wins:<span class="computer-wins"></span></h3>
+          <h3>wins:<span class="computer-wins-calculator"></span></h3>
       </aside>
     <script src="player.js"></script>
     <script src="game.js"></script>
     <script src="main.js"></script>
   </body>
 </html>
+
+
+<!-- <script text javascript player.js"></script> -->
