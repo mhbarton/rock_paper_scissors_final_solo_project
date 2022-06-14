@@ -1,6 +1,6 @@
 class Game{
-  constructor(){
-    this.category = "Original" || "Spicy";
+  constructor(category){
+    this.category = category;
     this.fighters = [];
     this.person = new Player("Person", " 웃 ");
     this.computer = new Player("Computer", "💻");
