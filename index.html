@@ -11,17 +11,17 @@
       <aside class="person">
         <img class="person-icon" src="./assets/personicon.svg">
         <h2>Person</h2>
-        <h3>wins:<span class="person-wins-calculator"></span></h3>
+        <h3 class="person-wins-calculator">wins:</h3>
           <div class="change-game-button">
-            <button class="change-game hidden" >Change Game</button>
+            <button class="change-game hidden" >Change Game?</button>
           </div>
       </aside>
       <main>f
         <section class="main-view">
           <h1>Rock, Paper, Scissors</h1>
-          <h2 class="pick-game">Pick Your Game!</h2>
-          <h2 class="pick-fighter hidden"> Choose Your Fighter! </h2>
-          <h2 class="results hidden"> And the winner is:</h2>
+          <h2 class="pick-game-tagline">Pick Your Game!</h2>
+          <h2 class="pick-fighter-tagline hidden"> Choose Your Fighter! </h2>
+          <h2 class="results-tagline hidden" id="results-tagline"> And the winner is:</h2>
           <article class="game-choices-view">
             <container class="game-choice-original">
             <div>
@@ -42,33 +42,38 @@
               <p> Spock beats Scissors & Rock </p>
             </container>
           </article>
-        <section class="fighters-view">
+        <article class="fighters-view">
           <article class="original-fighters hidden">
             <img class="original-characters" id="rock" src="./assets/rockicon.svg" alt="rock icon">
             <img class="original-characters" id="paper" src="./assets/papericon.svg" alt="paper icon">
-            <img class="original-characters" id="scissors" src="./assets/scissoricon.svg" alt="scissors icon">
+            <img class="original-characters" id="scissor" src="./assets/scissoricon.svg" alt="scissor icon">
           </article>
           <article class="spicy-fighters hidden">
             <img class="spicy-characters" id="lizard" src="./assets/lizardicon.svg" alt="lizard icon">
-            <img class="spicy-characters" id="spock" src="./assets/spockicon.svg" alt="Spock icon">
+            <img class="spicy-characters" id="spock" src="./assets/spockicon.svg" alt="spock icon">
           </article>
-        <article class="results-view hidden">
-            <h2 class="person-wins"> 웃 Person 웃 </h2>
-            <h2 class="computer-wins"> &#128187; Computer &#128187; </h2>
-            <h2 class="no-wins"> &#128529; Oh it's a draw! &#128529; </h2>
+        </article>
+        <article class="results-view" id="results-view">
+        </article>
+        <article class="winner-view" id="winner-view">
         </article>
       </section>
       </main>
       <aside class="computer">
           <img class="computer-icon" src="./assets/computericon.svg">
           <h2>Computer</h2>
-          <h3>wins:<span class="computer-wins-calculator"></span></h3>
+          <h3 class="computer-wins-calculator">wins:</h3>
       </aside>
-    <script src="player.js"></script>
-    <script src="game.js"></script>
-    <script src="main.js"></script>
+    <script type="text/javascript" src="player.js"></script>
+    <script type="text/javascript" src="game.js"></script>
+    <script type="text/javascript" src="main.js"></script>
   </body>
 </html>
 
 
 <!-- <script text javascript player.js"></script> -->
+
+
+<!-- <h2 class="person-wins"> 웃 Person 웃 </h2>
+<h2 class="computer-wins"> &#128187; Computer &#128187; </h2>
+<h2 class="no-wins"> &#128529; Oh it's a draw! &#128529; -->
