@@ -8,25 +8,27 @@
 
 body{
   background-image: url("./assets/background2.jpeg");
-  /* z-index: 1;
-  opacity: 0.8; */
+  overflow-x: hidden;
   width: 100vw;
-  height: 100vh;
+  height: 100%;
   display: flex;
+  /* border: 20px solid #805533 */
 }
 
 main{
   display: flex;
+  height:100vh;
   width: 60%;
   flex-direction: column;
   align-items: center;
 }
 
+.main-view{
+  height: 100%;
+}
+
 h1{
   font-size: 85px;
-  /* background-image: url("./assets/slipofpaper.jpeg"); */
-  /* height: 500px;
-  width: 1000px; */
 }
 
 h2{
@@ -36,17 +38,16 @@ h2{
 }
 
 h3{
-  font-size: 20px;
+  font-size: 25px;
 }
 
 aside{
-  height: 100%;
+  height: 100vh;
   width: 20%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  border-style: double;
-  border-color: #805533;
+  border: 20px double #805533;
 }
 
 .person{
@@ -59,6 +60,21 @@ aside{
 
 .game-choices-view {
   display:flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: row;
+  padding: 50px;
+}
+
+.game-choice-original,
+.game-choice-spicy{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid black;
+  height: 300px;
+  width: 275px;
 }
 
 .person-icon,
@@ -99,25 +115,62 @@ aside{
   left: 0px;
 }
 
-/* @media (min-width: 768px) {
-  .change-game {
-    padding: 13px 50px 13px;
-  } */
-
-
 .fighters-view{
   display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
   height: 100px;
 }
 
 .original-characters{
   height: 186px;
+  flex-direction: row;
+  justify-content: space-evenly;
+  border: 2px solid black;
+  background-color: white;
+}
+
+.original-characters:hover{
+  transform:scale(1.3)
 }
 
 .spicy-characters{
-  height: 180px;
+  height: 186px;
+  flex-direction: row;
+  justify-content: space-evenly;
 }
 
+.spicy-characters:hover{
+  transform:scale(1.3)
+}
+
+.winner-view{
+  font-size: 40px;
+  margin-top: 0px;
+  display: flex;
+  justify-content:center;
+}
+
+.person-pick-result,
+.computer-pick-result{
+  height: 250px;
+  width: 250px;
+  display:flex;
+}
+
+.results-view{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 400px;
+}
+
+.results-wrapper{
+  display:flex;
+  flex-direction: column;
+}
 
 .hidden{
 display: none !important;
