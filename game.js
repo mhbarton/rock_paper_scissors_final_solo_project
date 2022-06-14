@@ -5,13 +5,13 @@ class Game{
     this.person = new Player("Person", " 웃 ");
     this.computer = new Player("Computer", "💻");
     this.computerChoice = null;
-    this.winner = null;
+    this.winner = this.winner;
   }
   pickFighters(){
     if(this.category === "Original"){
-      this.fighters = ["rock", "paper", "scissors"];
+      this.fighters = ["rock", "paper", "scissor"];
     }else if(this.category === "Spicy"){
-      this.fighters = ["rock", "paper", "scissor", "lizard", "Spock"]
+      this.fighters = ["rock", "paper", "scissor", "lizard", "spock"]
     }
   }
   generateComputerPick(){
@@ -21,23 +21,25 @@ class Game{
 
   decideWinner(){
     if(this.computerChoice === this.person.currentChoice){
-      this.winner = " &#128529; It's a draw! &#128529; "
+      this.winner = "Oh wait, it's a draw"
     }else if (
-    (this.person.currentChoice === "rock" && this.computerChoice === "scissors") ||
+    (this.person.currentChoice === "rock" && this.computerChoice === "scissor") ||
     (this.person.currentChoice === "rock" && this.computerChoice === "lizard") ||
-    (this.person.currentChoice === "paper" && this.computerChoice === "Spock") ||
+    (this.person.currentChoice === "paper" && this.computerChoice === "spock") ||
     (this.person.currentChoice === "paper" && this.computerChoice === "rock") ||
-    (this.person.currentChoice === "scissors" && this.computerChoice === "paper") ||
-    (this.person.currentChoice === "scissors" && this.computerChoice === "lizard") ||
+    (this.person.currentChoice === "scissor" && this.computerChoice === "paper") ||
+    (this.person.currentChoice === "scissor" && this.computerChoice === "lizard") ||
     (this.person.currentChoice === "lizard" && this.computerChoice === "paper") ||
-    (this.person.currentChoice === "lizard" && this.computerChoice === "Spock") ||
-    (this.person.currentChoice === "Spock" && this.computerChoice === "scissors") ||
-    (this.person.currentChoice === "Spock" && this.computerChoice === "rock") ) {
-      this.winner =  "웃 Person Wins 웃"
+    (this.person.currentChoice === "lizard" && this.computerChoice === "spock") ||
+    (this.person.currentChoice === "spock" && this.computerChoice === "scissor") ||
+    (this.person.currentChoice === "spock" && this.computerChoice === "rock") ) {
+      this.winner =  "person"
       this.person.wins ++
     } else {
-      this.winner = "&#128187; Computer Wins &#128187"
+      this.winner = "computer"
       this.computer.wins ++
     }
+      showPicks();
+      // showWinnerOutcome();
   }
 }
