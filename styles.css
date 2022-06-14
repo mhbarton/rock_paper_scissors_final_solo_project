@@ -1,8 +1,4 @@
-/* *{
-  border:2px solid red;
-} */
-
- *{
+*{
   font-family: 'Marker Felt', fantasy;
 }
 
@@ -12,7 +8,6 @@ body{
   width: 100vw;
   height: 100%;
   display: flex;
-  /* border: 20px solid #805533 */
 }
 
 main{
@@ -21,10 +16,6 @@ main{
   width: 60%;
   flex-direction: column;
   align-items: center;
-}
-
-.main-view{
-  height: 100%;
 }
 
 h1{
@@ -39,6 +30,9 @@ h2{
 
 h3{
   font-size: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 aside{
@@ -72,9 +66,10 @@ aside{
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  border: 2px solid black;
-  height: 300px;
+  border: 2px solid #87FF2A;
+  height: 325px;
   width: 275px;
+  background-color: #87FF2A;
 }
 
 .person-icon,
@@ -100,7 +95,7 @@ aside{
 
 .change-game:after {
   content: "";
-  background-color: #0048BA;
+  background-color: #FF007C;
   width: 100%;
   z-index: -1;
   position: absolute;
@@ -127,8 +122,6 @@ aside{
   height: 186px;
   flex-direction: row;
   justify-content: space-evenly;
-  border: 2px solid black;
-  background-color: white;
 }
 
 .original-characters:hover{
@@ -167,11 +160,6 @@ aside{
   height: 400px;
 }
 
-.results-wrapper{
-  display:flex;
-  flex-direction: column;
-}
-
 .hidden{
-display: none !important;
+display: none;
 }
