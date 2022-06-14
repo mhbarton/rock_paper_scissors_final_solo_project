@@ -60,6 +60,7 @@ function pickSpicyGame(){
   spicyFighters.classList.remove('hidden')
   pickFighterTagline.classList.remove('hidden')
   pickGameTagline.classList.add('hidden')
+  resultsInTagline.classList.add('hidden')
 }
 
 function pickSpicyFighters(){
@@ -91,10 +92,10 @@ function showPicks(){
 // // need to resize and reposition the pick icons
 function showWinnerOutcome(){
   if(game.winner === "person"){
-    winnerView.innerHTML = "Person";
+    winnerView.innerHTML = `<img class="person-icon" src="./assets/personicon.svg"> Person <img class="person-icon" src="./assets/personicon.svg">`;
     personWins.innerHTML = game.person.wins
   }else if(game.winner === "computer"){
-    winnerView.innerHTML = "Computer"
+    winnerView.innerHTML = `<img class="computer-icon" src="./assets/computericon.svg"> Computer <img class="computer-icon" src="./assets/computericon.svg">`
     computerWins.innerHTML = game.computer.wins
   }else {
     winnerView.innerText = "Oh wait, it's a draw!";
