@@ -10,10 +10,11 @@ var resultsView = document.getElementById("results-view");
 var pickGameTagline = document.querySelector(".pick-game-tagline");
 var pickFighterTagline = document.querySelector(".pick-fighter-tagline");
 var resultsInTagline = document.getElementById("results-tagline");
-var computerWins = document.querySelector(".computer-wins-calculator");
-var personWins = document.querySelector(".person-wins-calculator");
+var computerWins = document.getElementById("computer-wins-calculator");
+var personWins = document.getElementById("person-wins-calculator");
 var changeGameButton = document.querySelector(".change-game");
 var winnerView = document.getElementById("winner-view")
+
 
 
 
@@ -26,12 +27,16 @@ spicyFighters.addEventListener('click', pickSpicyFighters);
 
 
 function pickOriginalGame(){
+  game.category = "Original";
+  resultsView.classList.add('hidden')
+  winnerView.classList.add('hidden')
   changeGameButton.classList.remove('hidden')
   originalFighters.classList.remove('hidden')
   pickFighterTagline.classList.remove('hidden')
   originalGame.classList.add('hidden')
   spicyGame.classList.add('hidden')
   pickGameTagline.classList.add('hidden')
+  resultsInTagline.classList.add('hidden')
 }
 
 function pickOriginalFighters(){
@@ -39,11 +44,15 @@ function pickOriginalFighters(){
   game.person.takeTurn(event);
   game.generateComputerPick();
   game.decideWinner();
-  resetGame();
+  resultsView.classList.remove('hidden')
+  winnerView.classList.remove('hidden')
   console.log(game)
 }
 
 function pickSpicyGame(){
+  game.category = "Spicy";
+  resultsView.classList.add('hidden')
+  winnerView.classList.add('hidden')
   changeGameButton.classList.remove('hidden')
   originalGame.classList.add('hidden')
   spicyGame.classList.add('hidden')
@@ -58,15 +67,14 @@ function pickSpicyFighters(){
   game.person.takeTurn(event);
   game.generateComputerPick();
   game.decideWinner();
-  // resetGame();
+  resultsView.classList.remove('hidden')
+  winnerView.classList.remove('hidden')
   console.log(game)
 }
 
 function showPicks(){
   pickFighterTagline.classList.add('hidden');
   resultsInTagline.classList.remove('hidden');
-  // resultsView.innerHTML = "";
-    showWinnerOutcome();
   resultsView.innerHTML = `
     <article class="person-pick-result">
     <img id="${game.person.currentChoice}" src="./assets/${game.person.currentChoice}icon.svg">
@@ -75,26 +83,32 @@ function showPicks(){
     <img id="${game.computerChoice}" src="./assets/${game.computerChoice}icon.svg">
     </article>
     `;
-    originalFighters.classList.add('hidden');
-    // showWinnerOutcome();
+    showWinnerOutcome();
+
+
 }
 
 // // need to resize and reposition the pick icons
 function showWinnerOutcome(){
   if(game.winner === "person"){
-    game.person.wins = game.wins
     winnerView.innerHTML = "Person";
+    personWins.innerHTML = game.person.wins
   }else if(game.winner === "computer"){
     winnerView.innerHTML = "Computer"
+    computerWins.innerHTML = game.computer.wins
   }else {
     winnerView.innerText = "Oh wait, it's a draw!";
   }
+  originalFighters.classList.add('hidden');
+  spicyFighters.classList.add('hidden');
+  resetGame();
+
   }
 
 function resetGame(){
   if(game.category === "Original"){
-    setTimeout(pickOriginalGame, 1000);
+    setTimeout(pickOriginalGame, 3000);
   } else if(game.category === "Spicy"){
-    setTimeout(pickSpicyGame, 1000)
+    setTimeout(pickSpicyGame, 3000)
   }
 }
